@@ -1,14 +1,13 @@
 
 
 import './App.css'
-import MyButton from './Components/HeroArea'
-
+import HeroArea from './Components/HeroArea'
+import MyNavbar from './Components/Navbar'
 function App() {
   return (
     <>
- 
-     
-      <MyButton /> 
+    <MyNavbar />
+    <HeroArea />
     </>
   )
 }
