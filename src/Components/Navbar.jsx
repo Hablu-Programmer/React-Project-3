@@ -35,8 +35,6 @@ function MyNavbar() {
       <Navbar
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
-        className="w-full"
-        size="full"
         maxWidth="2xl"
       >
         <NavbarContent className="sm:hidden" justify="start">

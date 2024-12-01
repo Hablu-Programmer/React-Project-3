@@ -3,8 +3,8 @@ import { Autocomplete, AutocompleteItem, Button } from "@nextui-org/react";
 
 function HeroArea() {
   return (
-    <section className="bg-[url('./hero.png')] w-full h-[100vh] bg-no-repeat bg-cover mt-4 overflow-hidden mx-auto ">
-      <div className="container w-[80%] mx-auto">
+    <section className="bg-[url('./hero.png')] w-full h-[80vh] bg-no-repeat bg-cover mt-4 overflow-hidden mx-auto ">
+      <div className="container w-[80%] mx-auto mt-10">
         <h1 className="text-5xl w-[50%] font-bold py-10 px-10 mt-[30px] text-white leading-tight">
           Find amazing things to do anytime, anywhere in Lagos.
         </h1>
