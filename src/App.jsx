@@ -1,15 +1,12 @@
+import "./App.css";
+import { EatAndDrink } from "./pages";
 
-
-import './App.css'
-import HeroArea from './Components/HeroArea'
-import MyNavbar from './Components/Navbar'
 function App() {
   return (
     <>
-    <MyNavbar />
-    <HeroArea />
+      <EatAndDrink />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

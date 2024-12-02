@@ -1,4 +1,3 @@
-import React from "react";
 import { Autocomplete, AutocompleteItem, Button } from "@nextui-org/react";
 
 function HeroArea() {
@@ -93,7 +92,9 @@ function HeroArea() {
               </Autocomplete>
             </div>
             <div>
-                <Button color="primary" className="w-full p-8 mt-2">Search</Button>
+              <Button color="primary" className="w-full p-8 mt-2">
+                Search
+              </Button>
             </div>
           </div>
         </div>
