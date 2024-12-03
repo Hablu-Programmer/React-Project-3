@@ -1,6 +1,7 @@
 
 
 import './App.css'
+import Carousel from './Components/Carousel'
 import Chillsbay from './Components/Chillsbay'
 import HeroArea from './Components/HeroArea'
 import ImageCardSection from './Components/ImgSection'
@@ -15,6 +16,7 @@ function App() {
     <ImageCardSection /> 
     <ThingsCard />
     <Chillsbay />
+    <Carousel />
     </>
   )
 }
