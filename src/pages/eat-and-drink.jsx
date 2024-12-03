@@ -1,4 +1,9 @@
-import { FindPlaces, HeroArea } from "../Components/eat-and-drink";
+import {
+  FindPlaces,
+  HeroArea,
+  PopularRestaurants,
+  RestaurantsNearby,
+} from "../Components/eat-and-drink";
 import MyNavbar from "../Components/shared/Navbar";
 
 export const EatAndDrink = () => {
@@ -7,6 +12,8 @@ export const EatAndDrink = () => {
       <MyNavbar />
       <HeroArea />
       <FindPlaces />
+      <PopularRestaurants />
+      <RestaurantsNearby />
     </main>
   );
 };
