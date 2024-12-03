@@ -1,4 +1,4 @@
-import { HeroArea } from "../Components/eat-and-drink";
+import { FindPlaces, HeroArea } from "../Components/eat-and-drink";
 import MyNavbar from "../Components/shared/Navbar";
 
 export const EatAndDrink = () => {
@@ -6,6 +6,7 @@ export const EatAndDrink = () => {
     <main>
       <MyNavbar />
       <HeroArea />
+      <FindPlaces />
     </main>
   );
 };
