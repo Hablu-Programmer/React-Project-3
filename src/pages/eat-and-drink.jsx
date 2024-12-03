@@ -1,6 +1,7 @@
 import {
   FindPlaces,
   HeroArea,
+  Location,
   PopularRestaurants,
   RestaurantsNearby,
 } from "../Components/eat-and-drink";
@@ -14,6 +15,7 @@ export const EatAndDrink = () => {
       <FindPlaces />
       <PopularRestaurants />
       <RestaurantsNearby />
+      <Location />
     </main>
   );
 };
