@@ -1,5 +1,5 @@
 import { Button } from "@nextui-org/react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function Carousel() {
@@ -140,6 +140,7 @@ function Carousel() {
         <div className="flex justify-center items-center gap-2 mt-6">
           {CarouselData.map((_, index) => (
             <button
+              key={index}
               onClick={() => handleDotClick(index)}
               className={`w-3 h-3 rounded-full ${
                 index === currentIndex ? "bg-black" : "bg-gray-300"

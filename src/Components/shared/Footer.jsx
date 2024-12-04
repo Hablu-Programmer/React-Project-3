@@ -1,5 +1,4 @@
 import { Button } from "@nextui-org/react";
-import React from "react";
 
 const footerData = {
   socialIcons: [
@@ -101,7 +100,9 @@ function Footer() {
             <p className="text-md text-gray-400 mt-5 mb-5">
               {partnerSection.description}
             </p>
-            <Button color="primary" className="w-full" size="xl">Join Now</Button>
+            <Button color="primary" className="w-full" size="xl">
+              Join Now
+            </Button>
           </div>
         </div>
       </div>
