@@ -1,4 +1,7 @@
+import "./App.css";
+import { EatAndDrink } from "./pages";
 
+<<<<<<< HEAD
 
 import './App.css'
 import Carousel from './Components/Carousel'
@@ -9,10 +12,13 @@ import HeroArea from './Components/HeroArea'
 import ImageCardSection from './Components/ImgSection'
 import MyNavbar from './Components/Navbar'
 import ThingsCard from './Components/ThingsToDo'
+=======
+>>>>>>> 0e714e1b6dbc50ac02a38bbf8c151847bc9428e8
 function App() {
 
   return (
     <>
+<<<<<<< HEAD
     <MyNavbar />
     <HeroArea />
     <ImageCardSection /> 
@@ -22,8 +28,11 @@ function App() {
     <GALARY />
     <Footer />
   
+=======
+      <EatAndDrink />
+>>>>>>> 0e714e1b6dbc50ac02a38bbf8c151847bc9428e8
     </>
-  )
+  );
 }
 
-export default App
+export default App;
