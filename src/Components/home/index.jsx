@@ -13,14 +13,14 @@ export const HomePage = () => {
     <main>
       <MyNavbar />
       <HeroArea />
-      <Chillsbay />
-      <GALARY />
-      <ThingsCard />
       <ImageCardSection />
+      <ThingsCard />
+      <Chillsbay />
       <Carousel
         data={homepageCarousel}
         subtitle="Upcoming events this weekend"
       />
+      <GALARY />
       <Footer />
     </main>
   );
