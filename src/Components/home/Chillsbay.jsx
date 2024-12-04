@@ -1,5 +1,3 @@
-import React from "react";
-
 function Chillsbay() {
   const CardInfo = [
     {
@@ -18,6 +16,7 @@ function Chillsbay() {
       des: "Add multiple experiences to your cart and checkout on one click.",
     },
   ];
+
   return (
     <section>
       <h1 className="text-center text-[#26395C] text-3xl lg:text-5xl mt-16 mb-10 font-semibold">

@@ -1,4 +1,5 @@
 import { Link } from "@nextui-org/react";
+import { restaurants } from "../../lib/assets/data";
 import { Card } from "../common";
 
 export const RestaurantsNearby = () => {
@@ -23,30 +24,3 @@ export const RestaurantsNearby = () => {
     </section>
   );
 };
-
-const restaurants = [
-  {
-    name: "Slow Lagos",
-    image: "img1.png",
-    address: "2 Musa Yar’Adua, Lagos Nigeria",
-    cuis: "African • Italian • Asian • Continental",
-  },
-  {
-    name: "Nok by Alara",
-    image: "img2.png",
-    address: "2 Musa Yar’Adua, Lagos Nigeria",
-    cuis: "African • Italian • Asian • Continental",
-  },
-  {
-    name: "Noir",
-    image: "img3.png",
-    address: "2 Musa Yar’Adua, Lagos Nigeria",
-    cuis: "African • Italian • Asian • Continental",
-  },
-  {
-    name: "Soho",
-    image: "img4.png",
-    address: "2 Musa Yar’Adua, Lagos Nigeria",
-    cuis: "African • Italian • Asian • Continental",
-  },
-];
