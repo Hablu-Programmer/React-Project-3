@@ -1,7 +1,4 @@
 import "./App.css";
-import { EatAndDrink } from "./pages";
-
-import "./App.css";
 import Carousel from "./Components/Carousel";
 import Chillsbay from "./Components/Chillsbay";
 import Footer from "./Components/Footer";
