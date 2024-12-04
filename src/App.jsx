@@ -3,6 +3,8 @@
 import './App.css'
 import Carousel from './Components/Carousel'
 import Chillsbay from './Components/Chillsbay'
+import Footer from './Components/Footer'
+import GALARY from './Components/GALARY.JSX'
 import HeroArea from './Components/HeroArea'
 import ImageCardSection from './Components/ImgSection'
 import MyNavbar from './Components/Navbar'
@@ -17,6 +19,9 @@ function App() {
     <ThingsCard />
     <Chillsbay />
     <Carousel />
+    <GALARY />
+    <Footer />
+  
     </>
   )
 }
