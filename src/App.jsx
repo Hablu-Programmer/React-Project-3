@@ -11,6 +11,7 @@ import MyNavbar from "./Components/shared/Navbar";
 // import ThingsCard from "./Components/home/ThingsToDo";
 
 // Eat and Drink page
+import Carousel from "./Components/common/carousel";
 import {
   FindPlaces,
   HeroArea,
@@ -18,6 +19,7 @@ import {
   PopularRestaurants,
   RestaurantsNearby,
 } from "./Components/eat-and-drink";
+import { homepageCarousel } from "./lib/assets/data";
 
 function App() {
   return (
@@ -26,6 +28,10 @@ function App() {
       <HeroArea />
       <FindPlaces />
       <PopularRestaurants />
+      <Carousel
+        data={homepageCarousel}
+        subtitle="Upcoming Eat & Drink Events"
+      />
       <RestaurantsNearby />
       <Location />
       <Footer />

@@ -76,7 +76,7 @@ function Carousel() {
         <div className="flex items-center justify-between">
           <button
             onClick={handlePrev}
-            className="absolute left-0 transform -translate-x-6 flex items-center justify-center  text-black rounded-full w-12 h-12 "
+            className="absolute left-0 transform -translate-x-6 flex items-center justify-center  text-black rounded-full w-12 h-12"
           >
             <FaArrowLeft />
           </button>
