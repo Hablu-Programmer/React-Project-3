@@ -1,28 +1,24 @@
 import "./App.css";
 
-import './App.css'
-import Carousel from './Components/Carousel'
-import Chillsbay from './Components/Chillsbay'
-import Footer from './Components/Footer'
-import GALARY from './Components/GALARY.JSX'
-import HeroArea from './Components/HeroArea'
-import MyModal from './Components/HomePage/Modal'
-import ImageCardSection from './Components/ImgSection'
-import MyNavbar from './Components/Navbar'
-import ThingsCard from './Components/ThingsToDo'
+import Footer from "./Components/Footer";
+import HomePage from "./Components/HomePage/Index";
+import MyNavbar from "./Components/Navbar";
+import DrinkPage from "./Components/DrinkPage/DrinkPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ClubPage from "./Components/ClubPage/Club";
+
 function App() {
   return (
     <>
-    <MyNavbar />
-    <HeroArea />
-    <ImageCardSection /> 
-    <ThingsCard />
-    <Chillsbay />
-    <Carousel />
-    <GALARY />
-    <Footer />
-
-  
+      <Router>
+        <MyNavbar />
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/drink" element={<DrinkPage />}></Route>
+          <Route path="/Club" element={<ClubPage />}></Route>
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }

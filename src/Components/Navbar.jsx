@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router";
 import {
   Navbar,
   NavbarBrand,
@@ -17,7 +18,7 @@ import {
   Button,
 } from "@nextui-org/react";
 
-const value = true
+const value = true;
 import { ChevronDownIcon, UserIcon } from "@heroicons/react/24/outline";
 import MyModal from "./HomePage/Modal";
 import ProfileDropDown from "./HomePage/Dropdown";
@@ -48,7 +49,10 @@ function MyNavbar() {
 
         <NavbarContent className="sm:hidden pr-3">
           <NavbarBrand>
-            <img className="w-44 " src="/logo.png" alt="" />
+            <NavLink to="/">
+              {" "}
+              <img className="w-44 " src="/logo.png" alt="" />{" "}
+            </NavLink>
           </NavbarBrand>
         </NavbarContent>
 
@@ -57,17 +61,29 @@ function MyNavbar() {
         <NavbarContent className="hidden sm:flex gap-4  w-full justify-center">
           <NavbarBrand>
             <NavbarBrand>
-              {" "}
-              <img className="w-44 " src="/logo.png" alt="" />
+              <NavLink to="/">
+                {" "}
+                <img className="w-44 " src="/logo.png" alt="" />{" "}
+              </NavLink>
             </NavbarBrand>
           </NavbarBrand>
           <NavbarItem>
-            <Link className="text-black">Eat & drink</Link>
+            <NavLink
+              to="/drink"
+              className="text-black"
+              style={({ isActive }) => ({
+                color: isActive ? "#0E8BFF" : "black",
+              })}
+            >
+              Eat & drink
+            </NavLink>
           </NavbarItem>
           <NavbarItem>
-            <Link>
-              Club <sup className="!bg-blue-600 text-[8px] px-2 ">+HOT</sup>
-            </Link>
+         
+           <NavLink to="/club"   style={({ isActive }) => ({
+                color: isActive ? "#0E8BFF" : "black",
+              })}>    Club <sup className=" text-[8px] px-2 ">+HOT</sup></NavLink>
+           
           </NavbarItem>
           <NavbarItem>
             <Dropdown>
@@ -100,10 +116,7 @@ function MyNavbar() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-
-            {value === true ? <MyModal /> : <ProfileDropDown /> }
-                   
-    
+            {value === true ? <MyModal /> : <ProfileDropDown />}
           </NavbarItem>
           <NavbarItem>
             <Button color="primary">Contact Now</Button>
