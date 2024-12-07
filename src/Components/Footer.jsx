@@ -88,7 +88,7 @@ function Footer() {
           {sections.map((section, index) => (
             <MenuSection
               key={index}
-              title={section.title}
+               title={section.title}
               menus={section.menus}
             />
           ))}

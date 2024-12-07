@@ -6,6 +6,7 @@ import Chillsbay from './Components/Chillsbay'
 import Footer from './Components/Footer'
 import GALARY from './Components/GALARY.JSX'
 import HeroArea from './Components/HeroArea'
+import MyModal from './Components/HomePage/Modal'
 import ImageCardSection from './Components/ImgSection'
 import MyNavbar from './Components/Navbar'
 import ThingsCard from './Components/ThingsToDo'
@@ -21,6 +22,7 @@ function App() {
     <Carousel />
     <GALARY />
     <Footer />
+    <MyModal />
   
     </>
   )

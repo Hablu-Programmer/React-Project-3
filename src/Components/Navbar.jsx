@@ -17,7 +17,10 @@ import {
   Button,
 } from "@nextui-org/react";
 
+const value = true
 import { ChevronDownIcon, UserIcon } from "@heroicons/react/24/outline";
+import MyModal from "./HomePage/Modal";
+import ProfileDropDown from "./HomePage/Dropdown";
 
 function MyNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -97,45 +100,33 @@ function MyNavbar() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Dropdown>
-              <DropdownTrigger>
-                <Button variant="none">
-                  {" "}
-                  <UserIcon className="text-gray-500 w-4 h-4" /> Account{" "}
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu aria-label="profile">
-                <DropdownItem key="new">New file</DropdownItem>
-                <DropdownItem key="copy">Copy link</DropdownItem>
-                <DropdownItem key="edit">Edit file</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+
+            {value === true ? <MyModal /> : <ProfileDropDown /> }
+                   
+    
           </NavbarItem>
           <NavbarItem>
             <Button color="primary">Contact Now</Button>
           </NavbarItem>
         </NavbarContent>
 
-
         <div className="lg:hidden">
-        <NavbarContent className="w-full" justify="end">
-          <NavbarItem className="hidden lg:flex"> </NavbarItem>
+          <NavbarContent className="w-full" justify="end">
+            <NavbarItem className="hidden lg:flex"> </NavbarItem>
 
-          <NavbarItem>
-            <img src="/shoping.png" alt="" />
-          </NavbarItem>
-        </NavbarContent>
+            <NavbarItem>
+              <img src="/shoping.png" alt="" />
+            </NavbarItem>
+          </NavbarContent>
 
-        <NavbarMenu className="bg-[#F5FAFF]">
-          {menuitems.map((item, index) => (
-            <NavbarMenuItem key={index}>
-              <Link className="w-full text-black capitalize ">{item}</Link>
-            </NavbarMenuItem>
-          ))}
-        </NavbarMenu>
+          <NavbarMenu className="bg-[#F5FAFF]">
+            {menuitems.map((item, index) => (
+              <NavbarMenuItem key={index}>
+                <Link className="w-full text-black capitalize ">{item}</Link>
+              </NavbarMenuItem>
+            ))}
+          </NavbarMenu>
         </div>
-
-
       </Navbar>
     </section>
   );
