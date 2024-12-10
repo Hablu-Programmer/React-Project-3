@@ -7,6 +7,7 @@ import {
     DropdownItem,
     Button,
   } from "@nextui-org/react";
+
   
 function ProfileDropDown() {
   return (
@@ -19,8 +20,10 @@ function ProfileDropDown() {
                 </Button>
               </DropdownTrigger>
               <DropdownMenu aria-label="profile">
-                <DropdownItem key="new">New file</DropdownItem>
-                <DropdownItem key="copy">Copy link</DropdownItem>
+                <DropdownItem key="new">
+  
+                </DropdownItem>
+                <DropdownItem key="copy">Login</DropdownItem>
                 <DropdownItem key="edit">Edit file</DropdownItem>
               </DropdownMenu>
             </Dropdown>

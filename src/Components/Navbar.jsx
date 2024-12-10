@@ -40,6 +40,7 @@ function MyNavbar() {
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         maxWidth="2xl"
+    
       >
         <NavbarContent className="sm:hidden" justify="start">
           <NavbarMenuToggle
@@ -112,7 +113,11 @@ function MyNavbar() {
           </NavbarItem>
           <NavbarItem>
             <Link className="foreground">
+
+            <NavLink to="/cart">
               <img src="/shoping.png" alt="" />
+            </NavLink>
+            
             </Link>
           </NavbarItem>
           <NavbarItem>
