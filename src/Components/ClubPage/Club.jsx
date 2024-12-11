@@ -14,7 +14,7 @@ const Club = () => {
         api="/clug-data.json"
         title="Bars and Night clubs near you"
       />
-      <Map />
+      <Map isDark />
     </main>
   );
 };
