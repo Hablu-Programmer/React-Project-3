@@ -124,7 +124,11 @@ function MyNavbar() {
             {value === true ? <MyModal /> : <ProfileDropDown />}
           </NavbarItem>
           <NavbarItem>
-            <Button color="primary">Contact Now</Button>
+        
+         <NavLink to="contact">
+          <button className="bg-blue-600 p-3 rounded-xl text-white font-semibold">Contact Now</button>
+         </NavLink>
+         
           </NavbarItem>
         </NavbarContent>
 
