@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/react";
 
-const DrinkHero = () => {
+const Hero = () => {
   return (
     <section className='bg-[url("./club-hero.png")] w-full h-[65vh] bg-no-repeat bg-top  md:bg-cover overflow-hidden mx-auto'>
       <div className="flex flex-col justify-start items-center lg:items-start lg:py-[100px] p-4 pt-6 w-[80%] mx-auto">
@@ -24,4 +24,4 @@ const DrinkHero = () => {
   );
 };
 
-export default DrinkHero;
+export default Hero;
