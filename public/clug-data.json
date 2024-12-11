@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "date": "JUN 15",
+    "img": "card1.png",
+    "title": "Slow Lagos",
+    "des": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tags": "African • Italian • Asian • Continental"
+  },
+  {
+    "id": 2,
+    "date": "JUN 15",
+    "img": "card2.png",
+    "title": "Nok by Alara",
+    "des": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tags": "African • Italian • Asian • Continental"
+  },
+  {
+    "id": 3,
+    "date": "JUN 15",
+    "img": "card3.png",
+    "title": "Noir",
+    "des": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tags": "African • Italian • Asian • Continental"
+  },
+  {
+    "id": 4,
+    "date": "JUN 15",
+    "img": "card4.png",
+    "title": "Soho",
+    "des": "2 Musa Yar’Adua, Lagos Nigeria",
+    "tags": "African • Italian • Asian • Continental"
+  }
+]

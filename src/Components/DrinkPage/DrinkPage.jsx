@@ -1,4 +1,4 @@
-import Restuarants from "../Common/RestuarantsCard";
+import Restaurants from "../Common/RestuarantsCard";
 import DrinkCarousel from "./DrinkCarousel";
 import DrinkHero from "./DrinkHero";
 import FindPlace from "./FindPlace";
@@ -9,9 +9,9 @@ function DrinkPage() {
     <>
       <DrinkHero />
       <FindPlace />
-      <Restuarants title="Popular restuarants in Lagos" />
+      <Restaurants api="/data.json" title="Popular restaurants in Lagos" />
       <DrinkCarousel />
-      <Restuarants title="Resturants nearby" />
+      <Restaurants api="/data.json" title="Restaurants nearby" />
       <Map />
     </>
   );

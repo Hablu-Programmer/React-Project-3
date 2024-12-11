@@ -1,4 +1,4 @@
-import Restuarants from "../Common/RestuarantsCard";
+import Restaurants from "../Common/RestuarantsCard";
 import DrinkCarousel from "./DrinkCarousel";
 import DrinkHero from "./DrinkHero";
 import Map from "./Map";
@@ -7,9 +7,13 @@ const Club = () => {
   return (
     <main>
       <DrinkHero />
-      <Restuarants title="Popular restuarants in Lagos" />
+      <Restaurants isDark api="/clug-data.json" title="Popular Night Clubs" />
       <DrinkCarousel />
-      <Restuarants title="Resturants nearby" />
+      <Restaurants
+        isDark
+        api="/clug-data.json"
+        title="Bars and Night clubs near you"
+      />
       <Map />
     </main>
   );
