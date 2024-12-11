@@ -1,5 +1,5 @@
 import Restaurants from "../Common/RestuarantsCard";
-import DrinkCarousel from "./DrinkCarousel";
+import Carousel from "./DrinkCarousel";
 import DrinkHero from "./DrinkHero";
 import Map from "./Map";
 
@@ -8,7 +8,7 @@ const Club = () => {
     <main>
       <DrinkHero />
       <Restaurants isDark api="/clug-data.json" title="Popular Night Clubs" />
-      <DrinkCarousel />
+      <Carousel isDark />
       <Restaurants
         isDark
         api="/clug-data.json"
