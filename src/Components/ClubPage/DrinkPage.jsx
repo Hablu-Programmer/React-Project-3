@@ -1,7 +1,8 @@
-import Restuarants from "../Common/RestuarantsCard";
-import DrinkCarousel from "./DrinkCarousel";
+import React from "react";
 import DrinkHero from "./DrinkHero";
 import FindPlace from "./FindPlace";
+import DrinkCarousel from "./DrinkCarousel";
+import Restuarants from "../Common/RestuarantsCard";
 import Map from "./Map";
 
 function DrinkPage() {
