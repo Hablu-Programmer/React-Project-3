@@ -1,33 +1,62 @@
 import "./App.css";
 
-import Footer from "./Components/Footer";
-import HomePage from "./Components/HomePage/Index";
-import MyNavbar from "./Components/Navbar";
-import DrinkPage from "./Components/DrinkPage/DrinkPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import ClubPage from "./Components/ClubPage/Club";
-import MyPayment from "./Components/PaymentPage/Payment";
-import ContactSection from "./Components/ContactPage/Contact";
+import { Warper } from "./Components/Common/warper";
 import Contact from "./Components/ContactPage/Contact";
+import DrinkPage from "./Components/DrinkPage/DrinkPage";
+import HomePage from "./Components/HomePage/Index";
+import MyPayment from "./Components/PaymentPage/Payment";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Router>
-        <MyNavbar />
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/drink" element={<DrinkPage />}></Route>
-          <Route path="/Club" element={<ClubPage />}></Route>
-          <Route path="/cart" element={<MyPayment />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-
-     
-        </Routes>
-        <Footer />
-      </Router>
-    </>
+    <Router>
+      {/* <MyNavbar /> */}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Warper>
+              <HomePage />
+            </Warper>
+          }
+        />
+        <Route
+          path="/drink"
+          element={
+            <Warper>
+              <DrinkPage />
+            </Warper>
+          }
+        />
+        <Route
+          path="/Club"
+          element={
+            <Warper isDark>
+              <ClubPage />
+            </Warper>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <Warper>
+              <MyPayment />
+            </Warper>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Warper>
+              <Contact />
+            </Warper>
+          }
+        />
+      </Routes>
+      {/* <Footer /> */}
+    </Router>
   );
-}
+};
 
 export default App;

@@ -1,9 +1,7 @@
-import React from 'react'
+
 
 function ClubPage() {
-  return (
-    <div>Club</div>
-  )
+  return <div>Club</div>;
 }
 
-export default ClubPage
+export default ClubPage;

@@ -1,17 +1,15 @@
-import React, { useState } from "react";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-} from "@nextui-org/react";
-import { Input } from "@nextui-org/react";
 import { UserIcon } from "@heroicons/react/24/outline";
+import {
+  Button,
+  cn,
+  Input,
+  Modal,
+  ModalBody,
+  ModalContent,
+} from "@nextui-org/react";
+import { useState } from "react";
 
-function MyModal() {
+const MyModal = ({ isDark }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(true);
@@ -24,8 +22,14 @@ function MyModal() {
   return (
     <section>
       <div className="flex flex-wrap gap-3">
-        <Button variant="flat" onPress={handleOpen}>
-          <UserIcon className="text-gray-500 w-4 h-4" />
+        <Button
+          variant="flat"
+          onPress={handleOpen}
+          className={cn("bg-white text-black", isDark && "bg-black text-white")}
+        >
+          <UserIcon
+            className={cn("text-gray-500 w-4 h-4", isDark && " text-white")}
+          />
           Account
         </Button>
       </div>
@@ -61,7 +65,10 @@ function MyModal() {
                     Sign up and get exploring!
                   </h2>
                   <p className="text-md mb-4">
-                    Already have an account? <a href="" className="text-blue-500">Sign In</a>
+                    Already have an account?{" "}
+                    <a href="" className="text-blue-500">
+                      Sign In
+                    </a>
                   </p>
                 </div>
 
@@ -88,22 +95,38 @@ function MyModal() {
 
                 {/* Manual Signup Form */}
                 <form action="" className="mt-10">
-
                   <div className=" !mb-4 ">
-                    <Input type="email" label="Email" placeholder="habluprogrammer@gmail.com" labelPlacement="outside" />
+                    <Input
+                      type="email"
+                      label="Email"
+                      placeholder="habluprogrammer@gmail.com"
+                      labelPlacement="outside"
+                    />
                   </div>
 
                   <div className="mb-4 mt-12">
-                    <Input type="password" label="Password" placeholder="****************" labelPlacement="outside" />
+                    <Input
+                      type="password"
+                      label="Password"
+                      placeholder="****************"
+                      labelPlacement="outside"
+                    />
                   </div>
                   <button className="w-full bg-blue-500 text-white py-3 rounded-xl">
                     Sign Up
                   </button>
 
-                  <p className="text-sm mt-2 text-center"> 
-                  By creating an account, you agree to our <a href="" className="text-blue-500">Terms & Conditions</a> and <a href="" className="text-blue-500">Privacy Policy</a>.
+                  <p className="text-sm mt-2 text-center">
+                    By creating an account, you agree to our{" "}
+                    <a href="" className="text-blue-500">
+                      Terms & Conditions
+                    </a>{" "}
+                    and{" "}
+                    <a href="" className="text-blue-500">
+                      Privacy Policy
+                    </a>
+                    .
                   </p>
-
                 </form>
               </div>
             </div>
@@ -112,6 +135,6 @@ function MyModal() {
       </Modal>
     </section>
   );
-}
+};
 
 export default MyModal;

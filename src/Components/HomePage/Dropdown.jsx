@@ -1,34 +1,37 @@
-import React from 'react'
 import { UserIcon } from "@heroicons/react/24/outline";
 import {
-    Dropdown,
-    DropdownTrigger,
-    DropdownMenu,
-    DropdownItem,
-    Button,
-  } from "@nextui-org/react";
+  Button,
+  cn,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+} from "@nextui-org/react";
 
-  
-function ProfileDropDown() {
+const ProfileDropDown = ({ isDark }) => {
   return (
     <div>
-         <Dropdown>
-              <DropdownTrigger>
-                <Button variant="none">
-                  {" "}
-                  <UserIcon className="text-gray-500 w-4 h-4" /> Account{" "}
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu aria-label="profile">
-                <DropdownItem key="new">
-  
-                </DropdownItem>
-                <DropdownItem key="copy">Login</DropdownItem>
-                <DropdownItem key="edit">Edit file</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+      <Dropdown>
+        <DropdownTrigger>
+          <Button
+            variant="none"
+            color="primary"
+            className={cn("text-gray-500", isDark && "bg-black text-white")}
+          >
+            <UserIcon
+              className={cn("text-gray-500 w-4 h-4", isDark && "text-white")}
+            />
+            Account
+          </Button>
+        </DropdownTrigger>
+        <DropdownMenu aria-label="profile">
+          <DropdownItem key="new"></DropdownItem>
+          <DropdownItem key="copy">Login</DropdownItem>
+          <DropdownItem key="edit">Edit file</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
     </div>
-  )
-}
+  );
+};
 
-export default ProfileDropDown
+export default ProfileDropDown;

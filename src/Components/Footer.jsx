@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button, cn } from "@nextui-org/react";
 
 const footerData = {
   socialIcons: [
@@ -45,7 +45,7 @@ const footerData = {
   copyright: `© ${new Date().getFullYear()} All rights reserved.`,
 };
 
-const MenuSection = ({ title, menus }) => {
+const MenuSection = ({ title, menus, isDark }) => {
   return (
     <div>
       <p className="font-semibold text-2xl border-b-1 mb-5 py-3">{title}</p>
@@ -53,7 +53,7 @@ const MenuSection = ({ title, menus }) => {
         {menus.map((menu, index) => (
           <ul key={index}>
             {menu.items.map((item, idx) => (
-              <li key={idx} className="mb-4">
+              <li key={idx} className={cn("mb-4", isDark && "text-[#E4E7EC]")}>
                 {item}
               </li>
             ))}
@@ -64,7 +64,7 @@ const MenuSection = ({ title, menus }) => {
   );
 };
 
-function Footer() {
+const Footer = ({ isDark }) => {
   const { socialIcons, sections, partnerSection, logo, copyright } = footerData;
   return (
     <footer className="p-12">
@@ -72,7 +72,9 @@ function Footer() {
         {/* left side */}
         <div className="col-span-1">
           <img className="w-fit" src={logo} alt="" />
-          <p className="text-sm mb-4">{copyright}</p>
+          <p className={cn("text-sm mb-4", isDark && "text-[#969DAA]")}>
+            {copyright}
+          </p>
           <div className="flex space-x-4">
             {socialIcons.map((icon, index) => (
               <a href="" key={index} className="gap-4">
@@ -87,17 +89,33 @@ function Footer() {
           {sections.map((section, index) => (
             <MenuSection
               key={index}
-               title={section.title}
+              isDark={isDark}
+              title={section.title}
               menus={section.menus}
             />
           ))}
 
-          <div className="w-full bg-[#F5FAFF] p-8">
+          <div
+            className={cn(
+              "w-full bg-[#F5FAFF] p-8",
+              isDark && "bg-[#D0D8E7]/10"
+            )}
+          >
             <img className="mb-2" src={partnerSection.image} alt="" />
-            <h3 className="text-3xl text-[#26395C] font-bold">
+            <h3
+              className={cn(
+                "text-3xl text-[#26395C] font-bold",
+                isDark && "text-white"
+              )}
+            >
               {partnerSection.title}
             </h3>
-            <p className="text-md text-gray-400 mt-5 mb-5">
+            <p
+              className={cn(
+                "text-md text-gray-400 mt-5 mb-5",
+                isDark && "text-[#969DAA]"
+              )}
+            >
               {partnerSection.description}
             </p>
             <Button color="primary" className="w-full" size="xl">
@@ -108,6 +126,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
